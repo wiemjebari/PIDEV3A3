@@ -1,0 +1,7 @@
+.hover-accueil:hover{
+ -fx-background-color:#98AFC7;   
+}
+
+.hover-accueil:hover Text, .hover-accueil:hover FontAwesomeIcon {
+    -fx-fill:#CFECEC
+}
