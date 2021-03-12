@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="579.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutX="200.0" prefHeight="600.0" prefWidth="800.0">
+         <children>
+            <FlowPane layoutX="-6.0" prefHeight="594.0" prefWidth="806.0">
+               <children>
+                  <Pane prefHeight="50.0" prefWidth="800.0">
+                     <children>
+                        <Label layoutX="307.0" layoutY="17.0">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="284.0" layoutY="10.0" prefHeight="30.0" prefWidth="294.0" text="Gestion des compétitions">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnBack" layoutY="8.0" mnemonicParsing="false"  prefHeight="34.0" prefWidth="24.0" style="-fx-background-color: #F5F5F5;">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/left-arrow.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Separator prefHeight="0.0" prefWidth="806.0" />
+                  <ScrollPane prefHeight="551.0" prefWidth="493.0">
+                     <content>
+                        <FlowPane fx:id="flowPaneComp" prefHeight="548.0" prefWidth="494.0" />
+                     </content>
+                  </ScrollPane>
+                  <Pane prefHeight="551.0" prefWidth="310.0">
+                     <children>
+                        <TextField fx:id="titre" layoutX="86.0" layoutY="87.0" prefHeight="30.0" prefWidth="177.0" promptText="Titre" />
+                        <TextField fx:id="desc" layoutX="86.0" layoutY="133.0" prefHeight="30.0" prefWidth="177.0" promptText="Description" />
+                        <ComboBox fx:id="talent" layoutX="87.0" layoutY="185.0" prefHeight="25.0" prefWidth="177.0" promptText="Type de talent" />
+                        <DatePicker fx:id="date_debut" layoutX="86.0" layoutY="234.0" prefHeight="25.0" prefWidth="177.0" promptText="Date_Debut" />
+                        <DatePicker fx:id="date_fin" layoutX="86.0" layoutY="278.0" prefHeight="25.0" prefWidth="177.0" promptText="Date_Fin" />
+                        <Label layoutX="4.0" layoutY="85.0" prefHeight="30.0" prefWidth="67.0" text="Titre">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="4.0" layoutY="131.0" prefHeight="30.0" prefWidth="88.0" text="Description">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="6.0" layoutY="179.0" prefHeight="30.0" prefWidth="88.0" text="Talent">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" layoutY="231.0" prefHeight="30.0" prefWidth="88.0" text="Date Debut">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" layoutY="276.0" prefHeight="30.0" prefWidth="88.0" text="Date Fin">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" layoutY="324.0" prefHeight="30.0" prefWidth="88.0" text="Cout">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="ajoutComp" layoutX="126.0" layoutY="481.0" mnemonicParsing="false"  prefHeight="32.0" prefWidth="75.0" style="-fx-background-color: #72F852;" text="Ajouter !" />
+                        <HBox alignment="CENTER" layoutX="22.0" layoutY="369.0" prefHeight="100.0" prefWidth="269.0">
+                           <children>
+                              <Label text="Image">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imageC" fitHeight="95.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="browse" mnemonicParsing="false"  style="-fx-background-color: #CFDBD1;" text="..." />
+                           </children>
+                        </HBox>
+                        <Separator layoutX="-7.0" orientation="VERTICAL" prefHeight="551.0" prefWidth="7.0" />
+                        <Label layoutX="59.0" layoutY="24.0" prefHeight="30.0" prefWidth="228.0" text="Ajouter compétition">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="42.0" fitWidth="39.0" layoutX="12.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/event.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="titreCheck" fitHeight="21.0" fitWidth="24.0" layoutX="275.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="descriptionCheck" fitHeight="21.0" fitWidth="24.0" layoutX="275.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="debCheck" fitHeight="25.0" fitWidth="24.0" layoutX="276.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="finCheck" fitHeight="25.0" fitWidth="24.0" layoutX="278.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="coutCheck" fitHeight="25.0" fitWidth="24.0" layoutX="274.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="talentChecker" fitHeight="21.0" fitWidth="24.0" layoutX="275.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true" />
+                        <TextField fx:id="cout" layoutX="87.0" layoutY="330.0" prefHeight="25.0" prefWidth="177.0" promptText="Cout" />
+                     </children>
+                  </Pane>
+               </children>
+            </FlowPane>
+         </children>
+      </Pane>
+      <Pane prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #C44569;" styleClass="side-bar">
+         <children>
+            <Circle fill="WHITE" layoutX="74.0" layoutY="67.0" radius="29.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <effect>
+                  <DropShadow color="#c6c4c4" />
+               </effect>
+            </Circle>
+            <ImageView fitHeight="36.0" fitWidth="35.0" layoutX="57.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/02.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="29.0" layoutY="117.0" text="Rana Chaabane" textFill="#404040">
+               <font>
+                  <Font name="Calibri Bold" size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" layoutX="-4.0" layoutY="146.0" prefHeight="35.0" prefWidth="154.0" styleClass="sidebar-btn">
+               <children>
+                  
+                  <Label  prefHeight="17.0" prefWidth="70.0" styleClass="sidebar-btn-text" text="ACCEUIL" textFill="#f5f6f8">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutY="181.0"  prefHeight="35.0" prefWidth="148.0" styleClass="sidebar-btn">
+               <children>
+                  
+                  <Label styleClass="sidebar-btn-text" text="CHAT" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutY="216.0" prefHeight="35.0" prefWidth="148.0" styleClass="sidebar-btn">
+               <children>
+                  
+                  <Label styleClass="sidebar-btn-text" text="COMPETITION" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="2.0" layoutY="251.0" prefHeight="35.0" prefWidth="148.0" styleClass="sidebar-btn">
+               <children>
+                  
+                  <Label prefHeight="17.0" prefWidth="93.0" styleClass="sidebar-btn-text" text="ANNONCES" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="2.0" layoutY="290.0" prefHeight="35.0" prefWidth="148.0" styleClass="sidebar-btn">
+               <children>
+                  
+                  <Label styleClass="sidebar-btn-text" text="RECLAMATION" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Label alignment="TOP_CENTER" layoutX="40.0" layoutY="338.0" prefHeight="17.0" prefWidth="59.0" styleClass="sidebar-btn-text" text="LOGOUT" textFill="#2e2929">
+               <font>
+                  <Font name="Calibri Bold" size="13.0" />
+               </font>
+            </Label>
+            <Separator layoutX="201.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="608.0" prefWidth="1.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
