@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="bp" prefHeight="485.0" prefWidth="850.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionproduit.ClientController">
+   <children>
+      <VBox layoutX="30.0" layoutY="149.0" prefHeight="214.0" prefWidth="129.0" spacing="20.0">
+         <children>
+            <Label text="ID Panier" />
+            <Label text="ID produit" />
+            <Label text="Nom de produit" />
+            <Label text="Catégorie" />
+            <Label text="Prix de produit" />
+            <Label text="Quantité" />
+         </children>
+      </VBox>
+      <VBox layoutX="166.0" layoutY="150.0" prefHeight="199.0" prefWidth="167.0" spacing="9.0">
+         <children>
+            <TextField fx:id="tfidPanier" />
+            <TextField fx:id="tfidP" />
+            <TextField fx:id="tfNomP" />
+            <TextField fx:id="tfNomC" />
+            <TextField fx:id="tfPrixP" />
+            <TextField fx:id="tfQuantite" />
+         </children>
+      </VBox>
+      <TableView fx:id="tbProduit" layoutX="342.0" layoutY="124.0" onMouseClicked="#getSelected" prefHeight="347.0" prefWidth="491.0">
+         <columns>
+            <TableColumn fx:id="colidP" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="colNomP" prefWidth="137.0" text="Nom de produit" />
+            <TableColumn fx:id="colNomC" prefWidth="110.0" text="Catégorie" />
+            <TableColumn fx:id="colPrixP" prefWidth="90.0" text="Prix" />
+            <TableColumn fx:id="colQuantite" prefWidth="75.0" text="Quantité" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnInsert" layoutX="95.0" layoutY="406.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="98.0" style="-fx-background-color: skyblue;" text="order">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Text fill="#8bbbe4" layoutX="14.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Les Produit" wrappingWidth="336.99999383091927">
+         <font>
+            <Font name="Arial Black" size="26.0" />
+         </font>
+      </Text>
+      <Pane layoutY="67.0" prefHeight="13.0" prefWidth="407.0" style="-fx-background-color: skyblue;" />
+      <TextField fx:id="search" layoutX="613.0" layoutY="52.0" prefHeight="31.0" prefWidth="204.0" promptText="Search Product" />
+      <Text layoutX="543.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="search" wrappingWidth="56.99999916553497">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnPanier" layoutX="201.0" layoutY="406.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="98.0" style="-fx-background-color: skyblue;" text="Panier">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

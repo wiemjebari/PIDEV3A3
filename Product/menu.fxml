@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionproduit.MenuController">
+    
+     <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;">
+         <children>
+            <HBox layoutX="-1.0" layoutY="59.0" prefHeight="291.0" prefWidth="600.0">
+               <children>
+                  <ImageView fx:id="adminn" fitHeight="391.0" fitWidth="617.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/admin.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <JFXButton buttonType="RAISED" layoutX="17.0" layoutY="354.0" onAction="#goclient" text="Click Here" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="371.0" layoutY="287.0" onAction="#goadmin" text="Click Here" textFill="#1c1a43">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView glyphName="REFRESH" layoutX="311.0" layoutY="64.0" onMouseClicked="#switsh1" size="40" />
+            <FontAwesomeIconView fill="#1a1346" glyphName="REFRESH" layoutX="228.0" layoutY="66.0" onMouseClicked="#switsh2" size="40" />
+            <VBox fx:id="vbox" layoutX="295.0" layoutY="12.0" prefHeight="412.0" prefWidth="298.0">
+               <children>
+                  <ImageView fx:id="vb" fitHeight="431.0" fitWidth="305.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/bg.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+    
+</AnchorPane>
