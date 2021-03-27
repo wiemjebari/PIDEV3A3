@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="823.0" styleClass="btn" stylesheets="@tableview.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.AddLivreController">
+   <children>
+      <HBox alignment="TOP_CENTER" prefHeight="58.0" prefWidth="678.0">
+         <VBox.margin>
+            <Insets top="25.0" />
+         </VBox.margin>
+         <children>
+            <JFXButton onMouseClicked="#save" prefHeight="45.0" prefWidth="160.0" style="-fx-background-color: #00E676;" styleClass="btn" text="Save">
+               <HBox.margin>
+                  <Insets right="8.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="132.0" layoutY="19.0" onMouseClicked="#clean" prefHeight="45.0" prefWidth="160.0" style="-fx-background-color: #FFFF00;" styleClass="btn" text="Clean">
+               <HBox.margin>
+                  <Insets left="8.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="384.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Livre Audio">
+               <font>
+                  <Font name="Bauhaus 93" size="32.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER">
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="64.0">
+         <VBox.margin>
+            <Insets top="17.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="89.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Titre" wrappingWidth="120.13671875">
+               <font>
+                  <Font name="Century Gothic" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="tfTitre" prefHeight="39.0" prefWidth="424.0">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+         <VBox.margin>
+            <Insets top="17.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="114.0">
+         <VBox.margin>
+            <Insets top="17.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" />
+      <HBox alignment="CENTER" />
+      <HBox alignment="CENTER" />
+      <HBox alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Editeur" wrappingWidth="120.13671875">
+               <font>
+                  <Font name="Century Gothic" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="tfEditeur" prefHeight="39.0" prefWidth="424.0">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Catégorie" wrappingWidth="120.13671875">
+               <font>
+                  <Font name="Century Gothic" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="tfCategorie" prefHeight="39.0" prefWidth="424.0">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Durée" wrappingWidth="120.13671875">
+               <font>
+                  <Font name="Century Gothic" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="tfDuree" prefHeight="39.0" prefWidth="424.0">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Source" wrappingWidth="120.13671875">
+               <font>
+                  <Font name="Century Gothic" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="tfSource" prefHeight="39.0" prefWidth="424.0">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Audio" wrappingWidth="120.13671875">
+               <font>
+                  <Font name="Century Gothic" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="tfAudio" prefHeight="39.0" prefWidth="424.0">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <JFXButton onAction="#ajouteraudio" text="Choisir Audio" />
+      <HBox alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Image" wrappingWidth="120.13671875">
+               <font>
+                  <Font name="Century Gothic" size="21.0" />
+               </font>
+            </Text>
+            <JFXTextField fx:id="tfImage" prefHeight="39.0" prefWidth="424.0">
+               <font>
+                  <Font name="Century Gothic" size="20.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" />
+      <JFXButton onAction="#ajouterimage" text="Choisir Image" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

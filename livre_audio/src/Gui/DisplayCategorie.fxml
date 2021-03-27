@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="504.0" prefWidth="914.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.DisplayCategorieController">
+    <stylesheets>
+        <URL value="@tableview.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tvCategorie" layoutX="350.0" layoutY="173.0" onSort="#search" prefHeight="265.0" prefWidth="550.0">
+        <columns>
+          <TableColumn fx:id="colNom" maxWidth="175.0" prefWidth="175.0" style="-fx-alignment: center;" text="Nom" />
+            <TableColumn fx:id="colDescription" maxWidth="322.0" prefWidth="236.0" style="-fx-alignment: center;" text="Description" />
+            <TableColumn fx:id="editCol" maxWidth="388.0" prefWidth="162.0" style="-fx-alignment: center;" text="EDIT" />
+        </columns>
+      </TableView>
+      <Pane layoutY="59.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Text layoutX="337.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion de la liste des Catégories" wrappingWidth="488.13671875">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="32.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER" layoutX="602.0" layoutY="-1.0" prefHeight="36.0" prefWidth="37.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <FontAwesomeIconView glyphName="CLOSE" onMouseClicked="#close" size="20" styleClass="btn" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="760.0" layoutY="85.0" prefHeight="76.0" prefWidth="155.0">
+         <children>
+            <FontAwesomeIconView fill="#2196f3" glyphName="USER_PLUS" onMouseClicked="#getAddView" size="45" styleClass="btn">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+            <FontAwesomeIconView fill="#00e676" glyphName="REFRESH" layoutX="10.0" layoutY="65.0" onMouseClicked="#refreshTable" size="45" styleClass="btn">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </HBox>
+      <VBox layoutY="3.0" prefHeight="509.0" prefWidth="245.0" style="-fx-background-color: #333645;">
+         <children>
+            <Label prefHeight="58.0" prefWidth="245.0" style="-fx-background-color: #88abe4;" text="Admin Livres Audio" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="77.0" prefWidth="245.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="20.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <TextField fx:id="search" onKeyReleased="#search" prefHeight="32.0" prefWidth="339.0" promptText="Tapez ici pour chercher" style="-fx-background-color: #333645;">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="38.0" prefWidth="245.0">
+               <children>
+                  <FontAwesomeIconView fill="#bcb6b6" glyphName="LIST" size="15">
+                     <HBox.margin>
+                        <Insets left="10.0" top="8.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Label onDragDetected="#gotolivre" onMouseClicked="#gotolivre" text="Gérer les Livres" textFill="#bcb6b6">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="125.0" prefHeight="76.0" prefWidth="245.0">
+               <children>
+                  <FontAwesomeIconView fill="#bcb6b6" glyphName="LIST" size="15">
+                     <HBox.margin>
+                        <Insets left="10.0" top="8.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Label onDragDetected="#gotocategorie" onMouseClicked="#gotocategorie" text="Gérer les Catégories Audio" textFill="#bcb6b6">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="225.0" prefHeight="44.0" prefWidth="245.0">
+               <children>
+                  <FontAwesomeIconView fill="#bcb6b6" glyphName="DASHBOARD" size="15">
+                     <HBox.margin>
+                        <Insets left="10.0" top="8.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <Label onMouseClicked="#gotochart" text="Dashboard" textFill="#bcb6b6">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="40.0" layoutY="163.0" prefHeight="38.0" prefWidth="245.0" />
+         </children>
+      </VBox>
+      <TextField fx:id="filterField" layoutX="381.0" layoutY="108.0" onAction="#search" promptText="Chercher" />
+   </children>
+</AnchorPane>
