@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionproduit.views.ListProduitController">
+   <children>
+      <AnchorPane fx:id="box1" layoutX="-7.0" layoutY="3.0" prefHeight="599.0" prefWidth="259.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: white;">
+         <children>
+            <Label fx:id="produit1" layoutX="26.0" layoutY="263.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #6a7d9a;" text="Vehicule" />
+            <JFXButton fx:id="modif1" layoutX="140.0" layoutY="554.0" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #26B99A;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="supp1" layoutX="5.0" layoutY="554.0" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #FE2E64;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="photo1" fitHeight="222.0" fitWidth="244.0" layoutX="10.0" layoutY="7.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../images/2e1fee564b64677b4c05b411237ef3b9.jpeg" />
+               </image>
+            </ImageView>
+            <VBox layoutX="10.0" layoutY="300.0" prefHeight="249.0" prefWidth="251.0">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="70.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Nom  :" />
+                  <Label prefHeight="26.0" prefWidth="52.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Prix :" />
+                  <Label prefHeight="28.0" prefWidth="58.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Stock :" />
+                  <Label layoutX="10.0" layoutY="91.0" prefHeight="28.0" prefWidth="138.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Description" />
+               </children>
+            </VBox>
+            <Label fx:id="prix1" layoutX="57.0" layoutY="327.0" prefHeight="26.0" prefWidth="200.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="le prix" />
+            <Label fx:id="stock1" layoutX="56.0" layoutY="354.0" prefHeight="26.0" prefWidth="200.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="le stock" />
+            <Label fx:id="nom1" layoutX="73.0" layoutY="302.0" prefHeight="26.0" prefWidth="200.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="le nom" />
+            <Label fx:id="description1" layoutX="8.0" layoutY="411.0" prefHeight="127.0" prefWidth="261.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="description" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="box2" layoutX="273.0" layoutY="5.0" prefHeight="599.0" prefWidth="259.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: white;">
+         <children>
+            <Label fx:id="produit2" layoutX="26.0" layoutY="263.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #6a7d9a;" text="Vehicule" />
+            <JFXButton fx:id="modif2" layoutX="140.0" layoutY="554.0" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #26B99A;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="supp2" layoutX="5.0" layoutY="554.0" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #FE2E64;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="photo2" fitHeight="222.0" fitWidth="244.0" layoutX="10.0" layoutY="7.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../../../Downloads/PIDEVJava-master/PIDEVJava-master/src/com/bonplan/images/2e1fee564b64677b4c05b411237ef3b9.jpeg" />
+               </image>
+            </ImageView>
+            <VBox layoutX="10.0" layoutY="300.0" prefHeight="249.0" prefWidth="251.0">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="70.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Nom :" />
+                  <Label prefHeight="26.0" prefWidth="52.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Prix  :" />
+                  <Label prefHeight="28.0" prefWidth="58.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Stock  :" />
+                  <Label layoutX="10.0" layoutY="91.0" prefHeight="28.0" prefWidth="138.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Description " />
+               </children>
+            </VBox>
+            <Label fx:id="prix2" layoutX="57.0" layoutY="327.0" prefHeight="26.0" prefWidth="200.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="le prix" />
+            <Label fx:id="stock2" layoutX="56.0" layoutY="354.0" prefHeight="26.0" prefWidth="200.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="le stock" />
+            <Label fx:id="nom2" layoutX="73.0" layoutY="302.0" prefHeight="26.0" prefWidth="200.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="le nom" />
+            <Label fx:id="description2" layoutX="8.0" layoutY="411.0" prefHeight="136.0" prefWidth="261.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="description" />
+         </children>
+      </AnchorPane>
+      <Pagination fx:id="paginator" layoutX="442.0" layoutY="605.0" pageCount="50" prefHeight="49.0" prefWidth="200.0" />
+      <AnchorPane fx:id="box3" layoutX="550.0" layoutY="6.0" prefHeight="599.0" prefWidth="259.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: white;">
+         <children>
+            <Label fx:id="produit3" layoutX="26.0" layoutY="263.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #6a7d9a;" text="Vehicule" />
+            <JFXButton fx:id="modif3" layoutX="140.0" layoutY="554.0" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #26B99A;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="supp3" layoutX="5.0" layoutY="554.0" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #FE2E64;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="photo3" fitHeight="222.0" fitWidth="244.0" layoutX="10.0" layoutY="7.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../../../Downloads/PIDEVJava-master/PIDEVJava-master/src/com/bonplan/images/2e1fee564b64677b4c05b411237ef3b9.jpeg" />
+               </image>
+            </ImageView>
+            <VBox layoutX="10.0" layoutY="300.0" prefHeight="249.0" prefWidth="251.0">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="70.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Nom  :" />
+                  <Label prefHeight="26.0" prefWidth="52.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Prix :" />
+                  <Label prefHeight="28.0" prefWidth="58.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Stock :" />
+                  <Label layoutX="10.0" layoutY="91.0" prefHeight="28.0" prefWidth="138.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Description" />
+               </children>
+            </VBox>
+            <Label fx:id="prix3" layoutX="57.0" layoutY="327.0" prefHeight="26.0" prefWidth="200.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="le prix" />
+            <Label fx:id="stock3" layoutX="56.0" layoutY="354.0" prefHeight="26.0" prefWidth="200.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="le stock" />
+            <Label fx:id="nom3" layoutX="73.0" layoutY="302.0" prefHeight="26.0" prefWidth="200.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="le nom" />
+            <Label fx:id="description3" layoutX="8.0" layoutY="411.0" prefHeight="127.0" prefWidth="261.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="description" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="box4" layoutX="826.0" layoutY="6.0" prefHeight="599.0" prefWidth="259.0" style="-fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-background-color: white;">
+         <children>
+            <Label fx:id="produit4" layoutX="26.0" layoutY="263.0" prefHeight="29.0" prefWidth="207.0" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #6a7d9a;" text="Vehicule" />
+            <JFXButton fx:id="modif4" layoutX="140.0" layoutY="554.0" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #26B99A;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="supp4" layoutX="5.0" layoutY="554.0" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #FE2E64;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="photo4" fitHeight="222.0" fitWidth="244.0" layoutX="10.0" layoutY="7.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../../../../../Downloads/PIDEVJava-master/PIDEVJava-master/src/com/bonplan/images/2e1fee564b64677b4c05b411237ef3b9.jpeg" />
+               </image>
+            </ImageView>
+            <VBox layoutX="10.0" layoutY="300.0" prefHeight="249.0" prefWidth="251.0">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="70.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Nom :" />
+                  <Label prefHeight="26.0" prefWidth="52.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Prix :" />
+                  <Label prefHeight="28.0" prefWidth="58.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Stock :" />
+                  <Label layoutX="10.0" layoutY="91.0" prefHeight="28.0" prefWidth="138.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a;" text="Description" />
+               </children>
+            </VBox>
+            <Label fx:id="prix4" layoutX="57.0" layoutY="327.0" prefHeight="26.0" prefWidth="200.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="le prix" />
+            <Label fx:id="stock4" layoutX="56.0" layoutY="354.0" prefHeight="26.0" prefWidth="200.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="le stock" />
+            <Label fx:id="nom4" layoutX="73.0" layoutY="302.0" prefHeight="26.0" prefWidth="200.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="le nom" />
+            <Label fx:id="description4" layoutX="8.0" layoutY="411.0" prefHeight="136.0" prefWidth="261.0" style="-fx-font-size: 14; -fx-text-fill: #6a7d9a; -fx-font-weight: bold;" text="description" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

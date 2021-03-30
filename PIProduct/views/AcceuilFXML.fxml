@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="mainwindow" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #DDDDDD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionproduit.views.AcceuilFXMLController">
+   <children>
+      <AnchorPane fx:id="window" layoutY="50.0" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="20.0" fitWidth="200.0" layoutX="947.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Ressource/images/rrr.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="fb" fitHeight="33.0" fitWidth="35.0" layoutX="942.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Ressource/images/fa.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="insta" fitHeight="33.0" fitWidth="35.0" layoutX="990.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Ressource/images/inst.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="twit" fitHeight="33.0" fitWidth="35.0" layoutX="1039.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Ressource/images/twit.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="barre" prefHeight="50.0" prefWidth="1100.0" styleClass="headerbar" stylesheets="@../../../../../../../Downloads/PIDEVJava-master/PIDEVJava-master/src/com/bonplan/style/style.css">
+         <children>
+            <ImageView fx:id="profile" fitHeight="45.0" fitWidth="45.0" layoutX="98.0" layoutY="2.0" onMouseClicked="#profile" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Downloads/PIDEVJava-master/PIDEVJava-master/src/com/bonplan/icone/user.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="username" layoutX="155.0" layoutY="8.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="notification" fitHeight="40.0" fitWidth="40.0" layoutX="816.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Downloads/PIDEVJava-master/PIDEVJava-master/src/com/bonplan/icone/ic_notifications_white_48dp_1x.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="email" layoutX="155.0" layoutY="24.0" text="Label" textFill="#bfb3b3" />
+            <JFXHamburger fx:id="hamburger" layoutX="25.0" layoutY="14.0" styleClass="jfx-hamburger" />
+            <ImageView fx:id="logout" fitHeight="40.0" fitWidth="83.0" layoutX="947.0" layoutY="5.0" onMouseClicked="#logoutAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Downloads/PIDEVJava-master/PIDEVJava-master/src/com/bonplan/icone/logout22.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="chat" fitHeight="40.0" fitWidth="40.0" layoutX="870.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Downloads/PIDEVJava-master/PIDEVJava-master/src/com/bonplan/icone/ic_chat_white_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="panier" fitHeight="40.0" fitWidth="40.0" layoutX="763.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Downloads/PIDEVJava-master/PIDEVJava-master/src/com/bonplan/icone/ic_shopping_cart_white_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="close" fitHeight="40.0" fitWidth="45.0" layoutX="1046.0" layoutY="5.0" onMouseClicked="#closeWindow" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Downloads/PIDEVJava-master/PIDEVJava-master/src/com/bonplan/icone/close2.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="928.0" layoutY="3.0" orientation="VERTICAL" prefHeight="45.0" prefWidth="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="chart" layoutX="420.0" layoutY="50.0" prefHeight="290.0" prefWidth="500.0" style="-fx-background-color: #337AB7;" visible="false">
+         <children>
+            <JFXTreeTableView fx:id="paniertree" prefHeight="245.0" prefWidth="500.0">
+               <columns>
+                  <TreeTableColumn fx:id="imagePanier" prefWidth="200.0" text="Image" />
+                  <TreeTableColumn prefWidth="183.0" text="Quantite">
+                     <columns>
+                        <TreeTableColumn fx:id="PlusPanier" prefWidth="51.0" text="+" />
+                        <TreeTableColumn fx:id="quantite" prefWidth="130.0" text="Quantite" />
+                        <TreeTableColumn fx:id="MinusPanier" prefWidth="44.0" text="-" />
+                     </columns>
+                  </TreeTableColumn>
+                  <TreeTableColumn fx:id="cancel" prefWidth="73.0" text="Annuler" />
+               </columns>
+            </JFXTreeTableView>
+            <JFXButton fx:id="payerPanier" buttonType="RAISED" layoutX="205.0" layoutY="252.0" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #00C0EF;" text="Payer" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Ressource/images/credit-card.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="admin_window" layoutY="50.0" maxWidth="1100.0" minWidth="1100.0" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="26.0" prefHeight="200.0" prefWidth="700.0" style="-fx-effect: dropshadow(gaussian,rgb(0.0,0.0,0.0,0.15),6.0,0.7,0.0,1.5); -fx-background-color: white;">
+               <children>
+                  <Label fx:id="nom1" alignment="CENTER" layoutX="6.0" layoutY="8.0" prefHeight="39.0" prefWidth="301.0" styleClass="names" stylesheets="@../../../../../../../Downloads/PIDEVJava-master/paw/Paw/src/css/Master.css" text="Achat" />
+                  <HBox layoutX="10.0" layoutY="57.0" prefHeight="128.0" prefWidth="678.0" spacing="16.0">
+                     <children>
+                        <Pane prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <Pane prefHeight="128.0" prefWidth="60.0" style="-fx-background-color: #337AB7;" />
+                              <VBox layoutX="70.0" layoutY="25.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Achat livré" />
+                                    <Label fx:id="achat_livrer" prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 20; -fx-font-weight: BOLD;" text="5" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <Pane prefHeight="128.0" prefWidth="60.0" style="-fx-background-color: #00A65A;" />
+                              <VBox layoutX="70.0" layoutY="25.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Achat Payé" />
+                                    <Label fx:id="achat_payer" prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 20; -fx-font-weight: BOLD;" text="3" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <Pane prefHeight="128.0" prefWidth="60.0" style="-fx-background-color: #F39C12;" />
+                              <VBox layoutX="70.0" layoutY="25.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Achat Non Payé" />
+                                    <Label fx:id="achat_nonpayer" prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 20; -fx-font-weight: BOLD;" text="0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <Separator layoutX="2.0" layoutY="43.0" prefHeight="4.0" prefWidth="696.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="235.0" prefHeight="402.0" prefWidth="700.0" style="-fx-effect: dropshadow(gaussian,rgb(0.0,0.0,0.0,0.15),6.0,0.7,0.0,1.5); -fx-background-color: white;">
+               <children>
+                  <Label fx:id="nom11" alignment="CENTER" layoutX="6.0" layoutY="8.0" prefHeight="39.0" prefWidth="301.0" styleClass="names" text="Annonce" />
+                  <HBox layoutX="10.0" layoutY="57.0" prefHeight="128.0" prefWidth="678.0" spacing="16.0">
+                     <children>
+                        <Pane prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <Pane prefHeight="128.0" prefWidth="60.0" style="-fx-background-color: #B71C1C;" />
+                              <VBox layoutX="70.0" layoutY="25.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Adoption" />
+                                    <Label fx:id="adoption" prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 20; -fx-font-weight: BOLD;" text="5" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <Pane prefHeight="128.0" prefWidth="60.0" style="-fx-background-color: #E53935;" />
+                              <VBox layoutX="70.0" layoutY="25.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Animal Perdu" />
+                                    <Label fx:id="animal_perdu" prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 20; -fx-font-weight: BOLD;" text="3" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <Pane prefHeight="128.0" prefWidth="60.0" style="-fx-background-color: #E57373;" />
+                              <VBox layoutX="70.0" layoutY="25.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Animal Trouvé" />
+                                    <Label fx:id="animal_trouve" prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 20; -fx-font-weight: BOLD;" text="0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <Separator layoutX="2.0" layoutY="43.0" prefHeight="4.0" prefWidth="696.0" />
+                  <HBox layoutX="11.0" layoutY="224.0" prefHeight="128.0" prefWidth="678.0" spacing="16.0">
+                     <children>
+                        <Pane prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <Pane prefHeight="128.0" prefWidth="60.0" style="-fx-background-color: #212121;" />
+                              <VBox layoutX="70.0" layoutY="25.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Entrainement" />
+                                    <Label fx:id="training" prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 20; -fx-font-weight: BOLD;" text="5" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <Pane prefHeight="128.0" prefWidth="60.0" style="-fx-background-color: #757575;" />
+                              <VBox layoutX="70.0" layoutY="25.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Balade" />
+                                    <Label fx:id="walking" prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 20; -fx-font-weight: BOLD;" text="3" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="128.0" prefWidth="277.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5);">
+                           <children>
+                              <Pane prefHeight="128.0" prefWidth="60.0" style="-fx-background-color: #E0E0E0;" />
+                              <VBox layoutX="70.0" layoutY="25.0">
+                                 <children>
+                                    <Label prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="Accouplement" />
+                                    <Label fx:id="accouplement" prefHeight="40.0" prefWidth="160.0" style="-fx-font-size: 20; -fx-font-weight: BOLD;" text="0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="731.0" layoutY="63.0" prefHeight="476.0" prefWidth="340.0" style="-fx-effect: dropshadow(gaussian,rgb(0.0,0.0,0.0,0.15),6.0,0.7,0.0,1.5); -fx-background-color: white;">
+               <children>
+                  <Label fx:id="nom111" alignment="CENTER" layoutX="6.0" layoutY="8.0" prefHeight="39.0" prefWidth="301.0" styleClass="names" text="Aperçu Global" />
+                  <Separator layoutX="2.0" layoutY="43.0" prefHeight="4.0" prefWidth="338.0" />
+                  <VBox layoutX="20.0" layoutY="59.0" prefHeight="402.0" prefWidth="301.0">
+                     <children>
+                        <Label fx:id="nbr_Reclamation" prefHeight="57.0" prefWidth="301.0" text="Label">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nbr_veterinaire" prefHeight="57.0" prefWidth="301.0" text="Label">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nbr_conseille" prefHeight="57.0" prefWidth="301.0" text="Label">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nbr_produit" prefHeight="57.0" prefWidth="301.0" text="Label">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nbr_produit_out" prefHeight="57.0" prefWidth="301.0" text="Label">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nbr_utilisateur" prefHeight="57.0" prefWidth="301.0" text="Label">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="250.0" layoutY="50.0" prefHeight="650.0" prefWidth="250.0" />
+      <StackPane fx:id="stackpane" layoutX="450.0" layoutY="275.0" mouseTransparent="true" prefHeight="150.0" prefWidth="200.0" />
+      <StackPane fx:id="stackConfirmation" layoutX="450.0" layoutY="275.0" mouseTransparent="true" prefHeight="150.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+
+ #337AB7
+
+
+    
+    Author     : wiemj
+*/
+
+.sidepane{
+    -fx-background-color : #272928 ;
+}
+
+.headerbar{
+    -fx-background-color :  #337AB7;
+}
+
+.buttons:hover{
+    -fx-background-color: transparent;
+    -fx-background-radius : 0px;
+    -fx-border-color:  #ffffff ;
+    -fx-border-width: 0px 0px 0px 15px;
+    -fx-border-style:solid;
+}
+
+.buttonsAccueil{
+     -fx-background-color: #1565C0;
+}
+.jfx-hamburger StackPane{
+    -fx-background-color: white;
+}

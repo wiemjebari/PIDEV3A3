@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="winodow" prefHeight="650.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionproduit.views.AfficherFavorisProduitController">
+   <children>
+      <Pagination fx:id="paginator" layoutX="210.0" layoutY="449.0" prefHeight="91.0" prefWidth="282.0" />
+      <AnchorPane fx:id="box1" layoutX="210.0" layoutY="180.0" prefHeight="126.0" prefWidth="609.0">
+         <children>
+            <ImageView fx:id="image1" fitHeight="126.0" fitWidth="200.0" layoutX="6.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="categorie1" layoutX="217.0" layoutY="20.0" text="Categorie" />
+            <Label fx:id="nom1" layoutX="217.0" layoutY="45.0" text="Nom" />
+            <Text fx:id="prix1" layoutX="218.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix" />
+            <Text fx:id="stock1" layoutX="218.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock" />
+            <Label fx:id="description1" layoutX="221.0" layoutY="130.0" text="Description" />
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="recherche" layoutX="31.0" layoutY="62.0" onAction="#recherche" promptText="Rechercher..." />
+      <AnchorPane fx:id="details" layoutX="182.0" layoutY="95.0" prefHeight="184.0" prefWidth="0.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="250.0" layoutY="79.0" text="Nom :" />
+            <ImageView fx:id="photo" fitHeight="173.0" fitWidth="200.0" layoutX="31.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="226.0" layoutY="48.0" text="Catégorie :" />
+            <Label layoutX="252.0" layoutY="145.0" text="Stock" />
+            <Label layoutX="248.0" layoutY="113.0" text="Prix:" />
+            <Label layoutX="58.0" layoutY="245.0" text="Description : " />
+            <Text fx:id="descriptionD" layoutX="58.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Label fx:id="categorieD" layoutX="321.0" layoutY="48.0" text="Label" />
+            <Label fx:id="nomD" layoutX="321.0" layoutY="79.0" text="Label" />
+            <Label fx:id="stockD" layoutX="321.0" layoutY="145.0" text="Label" />
+            <Label fx:id="prixD" layoutX="321.0" layoutY="113.0" text="Label" />
+            <Label fx:id="idp1" layoutX="414.0" layoutY="79.0" text="idProduit" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="box" layoutX="210.0" prefHeight="135.0" prefWidth="845.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <ImageView fx:id="image" fitHeight="126.0" fitWidth="200.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="categorie" layoutX="212.0" layoutY="14.0" prefHeight="17.0" prefWidth="59.0" text="Categorie" />
+            <Label fx:id="nom" layoutX="214.0" layoutY="37.0" text="Nom" />
+            <Text fx:id="prix" layoutX="208.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix" />
+            <Label fx:id="stock" layoutX="207.0" layoutY="92.0" prefHeight="17.0" prefWidth="89.0" text="Stock" />
+            <Label fx:id="description" layoutX="207.0" layoutY="119.0" prefHeight="17.0" prefWidth="89.0" text="Description" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="box2" layoutX="215.0" layoutY="342.0" prefHeight="161.0" prefWidth="757.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <ImageView fx:id="image2" fitHeight="126.0" fitWidth="200.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="categorie2" layoutX="212.0" layoutY="10.0" prefHeight="17.0" prefWidth="59.0" text="Categorie" />
+            <Label fx:id="nom2" layoutX="214.0" layoutY="37.0" text="Nom" />
+            <Text fx:id="prix2" layoutX="208.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix" />
+            <Label fx:id="stock2" layoutX="207.0" layoutY="92.0" prefHeight="17.0" prefWidth="89.0" text="Stock" />
+            <Label fx:id="description2" layoutX="207.0" layoutY="119.0" prefHeight="17.0" prefWidth="89.0" text="Description" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="890.0" layoutY="50.0" mnemonicParsing="false" onAction="#accueil" prefHeight="25.0" prefWidth="191.0" text="Retour à la page d'accueil" />
+   </children>
+</AnchorPane>
