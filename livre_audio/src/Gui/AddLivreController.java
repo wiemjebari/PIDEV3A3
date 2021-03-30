@@ -82,6 +82,11 @@ if (titre.isEmpty() || editeur.isEmpty() || id_categorie.isEmpty() || duree.isEm
         } else {
             getQuery();
             insert();
+    FacebookClient fbClient = new DefaultFacebookClient("EAAWvzQABhWIBAEYy2nwp17jajvAbZCDcNfwlpHI76uqaukc4ZAlpOiquYG9P14EZAceAkTXxdiNrfIk8RJlMdaFHf6jp2KMEPBDn26Kg2vrZBty5GmYm8pAGW7l9FuLHxwDZB02oC0DRT3CMZCyPyrn4sYfXusmMFjMmlZCqFtzfhfdujN0oxefw6N7v0ThqucZD" );
+
+                     FacebookType response = fbClient.publish("feed", FacebookType.class,
+                             Parameter.with("message", "Un nouveau livre audio ajouté "+ tfTitre.getText()+"\n Crée par : " + tfEditeur.getText()   ));
+            clean();
             clean();
 
         }
