@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>DOcument</title>
+</head>
+<body>
+<h1>Le nombre des formations est: {{ formation |length }}</h1>
+{% set nbMax=0 %}
+{% for form in formation %}
+    {% set nbMax=max(form.nb_participants,nbMax) %}
+{% endfor %}
+<table border="1">
+    <tr>
+        <th>Reference</th>
+        <th>Titre</th>
+        <th>Description</th>
+        <th>Date Debut</th>
+        <th>Date fin</th>
+        <th>Nb Participants</th>
+    </tr>
+    {% for f in formation   %}
+    <tr>
+        {#{% if 'theorique' in f.Description %}#}
+        {#{% if f.nb_participants == nbMax %}#}
+        <td>{{ f.ref }}</td>
+        <td>{{ f.Titre | upper}}</td>
+        <td>{{ f.Description }}</td>
+        <td>{{ f.date_debut }}</td>
+        <td>{{ f.date_fin }}</td>
+        <td>{{ f.nb_participants }}</td>
+                <td>
+                    {% if f.nb_participants ==0 %}
+                        <form action="{{ path('detail',{'id':f.ref}) }}"> //or url
+                            <button>Participer</button>
+                        </form>
+                    {% endif %}
+                </td>
+            {% else %}
+                <strong>Tableau Vide</strong>
+        {#{% endif %}#}{#{% endif %}#}               
+    </tr>
+    {% endfor %}
+</table>
+{% set nbTot=0 %}
+{% for f in formation %}
+    {% set nbTot=nbTot+f.nb_participants %}
+{% endfor %}
+<p>le nombre total des participants est : {{ nbTot }}</p>
+</body>
+</html> 
