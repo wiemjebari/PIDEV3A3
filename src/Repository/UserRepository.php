@@ -19,41 +19,16 @@ class UserRepository extends ServiceEntityRepository
         parent::__construct($registry, User::class);
     }
 
-    public function getallidclients(int $idcl): array
-    {
-        $entityManager = $this->getEntityManager();
-
-        $query = $entityManager->createQuery(
-            '
-            SELECT id_client FROM User u
-            WHERE u.id_client > :thisone
-            '
-        )->setParameter('thisone', $idcl);
-        // returns an array of Product objects
-        return $query->getResult();
-    }
-
-    public function searchUser($criteria){
-        
-        return $this->createQueryBuilder('u')
-            ->leftJoin('u.nom', 'na')
-            ->where('na.nom = :userName')
-            ->setParameter("userName", $criteria->getNom())
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-
     // /**
     //  * @return User[] Returns an array of User objects
     //  */
     /*
     public function findByExampleField($value)
     {
-        return $this->createQueryBuilder('u')
-            ->andWhere('u.exampleField = :val')
+        return $this->createQueryBuilder('c')
+            ->andWhere('c.exampleField = :val')
             ->setParameter('val', $value)
-            ->orderBy('u.id', 'ASC')
+            ->orderBy('c.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
@@ -64,8 +39,8 @@ class UserRepository extends ServiceEntityRepository
     /*
     public function findOneBySomeField($value): ?User
     {
-        return $this->createQueryBuilder('u')
-            ->andWhere('u.exampleField = :val')
+        return $this->createQueryBuilder('c')
+            ->andWhere('c.exampleField = :val')
             ->setParameter('val', $value)
             ->getQuery()
             ->getOneOrNullResult()

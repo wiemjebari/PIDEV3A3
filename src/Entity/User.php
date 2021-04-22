@@ -2,71 +2,85 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=UserRepository::class)
+ * User
+ *
+ * @ORM\Table(name="user")
+ * @ORM\Entity
  */
 class User
 {
     /**
+     * @var int
+     *
+     * @ORM\Column(name="id_client", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $id_client;
+    private $idClient;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     * @ORM\ManyToOne(targetEntity="nom", inversedBy="prenom")
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=30, nullable=false)
      */
     private $nom;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=30, nullable=false)
      */
     private $prenom;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string
+     *
+     * @ORM\Column(name="sexe", type="string", length=30, nullable=false)
      */
     private $sexe;
 
     /**
-     * @ORM\Column(type="date")
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_naissance", type="date", nullable=false)
      */
-    private $date_naissance;
+    private $dateNaissance;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string
+     *
+     * @ORM\Column(name="mail", type="string", length=30, nullable=false)
      */
     private $mail;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string
+     *
+     * @ORM\Column(name="adresse", type="string", length=30, nullable=false)
      */
     private $adresse;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string
+     *
+     * @ORM\Column(name="role", type="string", length=30, nullable=false)
      */
     private $role;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=30, nullable=false)
      */
     private $password;
 
-    public function getid_client(): ?int
+    public function getIdClient(): ?int
     {
-        return $this->id_client;
-    }    
-
-    public function setid_client(): self
-    {
-        return $this->id_client;
-    } 
+        return $this->idClient;
+    }
 
     public function getNom(): ?string
     {
@@ -106,12 +120,12 @@ class User
 
     public function getDateNaissance(): ?\DateTimeInterface
     {
-        return $this->date_naissance;
+        return $this->dateNaissance;
     }
 
-    public function setDateNaissance(\DateTimeInterface $date_naissance): self
+    public function setDateNaissance(\DateTimeInterface $dateNaissance): self
     {
-        $this->date_naissance = $date_naissance;
+        $this->dateNaissance = $dateNaissance;
 
         return $this;
     }
@@ -164,5 +178,5 @@ class User
         return $this;
     }
 
-    
+
 }
