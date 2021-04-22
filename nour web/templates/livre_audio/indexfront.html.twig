@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html> <!--<![endif]-->
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="Bingo One page parallax responsive HTML Template ">
+
+    <meta name="author" content="Themefisher.com">
+
+    <title>HealthyVibes | Just Relax</title>
+
+    <!-- Mobile Specific Meta
+      ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+
+    <!-- CSS
+    ================================================== -->
+    <!-- Themefisher Icon font -->
+    <link rel="stylesheet" href="{{ asset('frontend/plugins/themefisher-font/style.css')}}">
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="{{ asset('frontend/plugins/bootstrap/css/bootstrap.min.css')}}">
+    <!-- Lightbox.min css -->
+    <link rel="stylesheet" href="{{ asset('frontend/plugins/lightbox2/dist/css/lightbox.min.css')}}">
+    <!-- animation css -->
+    <link rel="stylesheet" href="{{ asset('frontend/plugins/animate/animate.css')}}">
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="{{ asset('frontend/plugins/slick/slick.css')}}">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{{ asset('frontend/css/style.css')}}">
+
+</head>
+
+<body id="body">
+
+<!--
+ Start Preloader
+ ==================================== -->
+<div id="preloader">
+    <div class='preloader'>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!--
+End Preloader
+==================================== -->
+
+
+
+
+<!--
+Fixed Navigation
+==================================== -->
+<header class="navigation fixed-top">
+    <div class="container">
+        <!-- main nav -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <!-- logo -->
+            <a class="navbar-brand logo" href="{{ asset('index.html')}}">
+                <img class="logo-default" src="{{ asset('frontend/images/logo.jpg')}}" alt="logo"/>
+
+            </a>
+            <!-- /logo -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                    aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navigation">
+                <ul class="navbar-nav ml-auto text-center">
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="{{ asset('#')}}"
+                        >
+                            Acceuil
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{{ asset('frontend/about.html')}}">Centre de Massage</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{{ asset('frontend/service.html')}}">Randonnées</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{{ asset('frontend/pricing.html')}}">Produit</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{{ asset('frontend/team.html')}}">jeux</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{{ asset('livrefront')}}">Livre Audio</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{{ asset('frontend/contact.html')}}">Liste des Conseils</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{ asset('#')}}" id="navbarDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            Autres
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ asset('frontend/blog.html')}}">Contact</a>
+                            <a class="dropdown-item" href="{{ asset('frontend/contact.html')}}">404 Page</a>
+
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /main nav -->
+    </div>
+</header>
+<!--
+End Fixed Navigation
+==================================== -->
+<section class="single-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Livres</h2>
+                <ol class="breadcrumb header-bradcrumb">
+                    <li><a href={{ "indexfront.html" }}>Acceuil</a></li>
+                    <li class="active">Livres</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!--
+Start About Section
+==================================== -->
+
+
+
+<div class="content-wrap">
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 p-r-0 title-margin-right">
+                    <div class="page-header">
+
+                    </div>
+                </div>
+                <!-- /# column -->
+
+                <!-- /# column -->
+            </div>
+            <!-- /# row -->
+            <!-- /# row -->
+
+            <table>
+
+                <tbody>
+                {% for livre_audio in livre_audios %}
+                    <br><br>
+                    <div  class="courses-area">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="courses-inner res-mg-b-30">
+                                        <div class="courses-title">
+                                            <a> <img src="{{ asset('uploads/')~ livre_audio.image }}" width="300" height="300" style="display: block;
+                                             margin-left: 170%;
+                                              margin-right: auto;"></a>
+                                            <h2 style="margin-left:200%">{{ livre_audio.titre }}</h2>
+                                        </div>
+
+                                        <div class="course-des">
+                                         <p style="margin-left:170%"><span><i class="fa fa-book"></i></span> <b> Editeur  </b>  {{ livre_audio.editeur }}</p>
+                                            <p style="margin-left:170%"><span><i class="fa fa-book"></i></span> <b>Catégorie </b> {{ livre_audio.categorie }}</p>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+                </tbody>
+            </table>
+
+
+                    <!-- /# row -->
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="footer">
+                    <p>2021 © Healthy Vibes. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Start Testimonial
+    =========================================== -->
+
+    <section class="testimonial section" id="testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- testimonial wrapper -->
+                    <div class="testimonial-slider">
+                        <!-- testimonial single -->
+                        <div class="item text-center">
+                            <i class="tf-ion-chatbubbles"></i>
+                            <!-- client info -->
+                            <div class="client-details">
+                                <p>Votre application est trés efficace pour s'enfuir un peu de stress continue </p>
+                            </div>
+                            <!-- /client info -->
+                            <!-- client photo -->
+                            <div class="client-thumb">
+                                <img src="{{ asset('frontend/images/client-logo/clients-1.jpg')}}" class="img-fluid" alt="">
+                            </div>
+                            <div class="client-meta">
+                                <h3>Ahmed</h3>
+                                <span></span>
+                            </div>
+                            <!-- /client photo -->
+                        </div>
+                        <!-- /testimonial single -->
+
+                        <!-- testimonial single -->
+                        <div class="item text-center">
+                            <i class="tf-ion-chatbubbles"></i>
+                            <!-- client info -->
+                            <div class="client-details">
+                                <p>Merci pour votre service excellent j'aime bien l'organisation de votres randonnées et les centres de massage et l'achat des produits en ligne</p>
+                            </div>
+                            <!-- /client info -->
+                            <!-- client photo -->
+                            <div class="client-thumb">
+                                <img src="{{ asset('frontend/images/client-logo/clients-2.jpg')}}" class="img-fluid" alt="">
+                            </div>
+                            <div class="client-meta">
+                                <h3>Linda </h3>
+                                <span></span>
+                            </div>
+                            <!-- /client photo -->
+                        </div>
+                        <!-- /testimonial single -->
+
+                        <!-- testimonial single -->
+                        <div class="item text-center">
+                            <i class="tf-ion-chatbubbles"></i>
+                            <!-- client info -->
+                            <div class="client-details">
+                                <p>C'est parfait de trouer des jeux en ligne ou hors ligne en plus votres conseils et les livres audios m'aides beaucoup </p>
+                            </div>
+                            <!-- /client info -->
+                            <!-- client photo -->
+                            <div class="client-thumb">
+                                <img src="{{ asset('frontend/images/client-logo/clients-3.jpg')}}" class="img-fluid" alt="">
+                            </div>
+                            <div class="client-meta">
+                                <h3>Ali</h3>
+                                <span></span>
+                            </div>
+                            <!-- /client photo -->
+                        </div>
+                        <!-- /testimonial single -->
+                    </div>
+                </div> 		<!-- end col lg 12 -->
+            </div>	    <!-- End row -->
+        </div>       <!-- End container -->
+    </section>    <!-- End Section -->
+
+    <!--
+            Start Blog Section
+            =========================================== -->
+
+
+    <footer id="footer" class="bg-one">
+        <div class="top-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <h3>A propos</h3>
+                        <p> .</p>
+                    </div>
+                    <!-- End of .col-sm-3 -->
+
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <ul>
+                            <li><h3>Notre Services</h3></li>
+                            <li><a href="{{ asset('#')}}">Centre de massage</a></li>
+                            <li><a href="{{ asset('#')}}">Reservation des Randonnées</a></li>
+                            <li><a href="{{ asset('#')}}">Des jeux</a></li>
+                            <li><a href="{{ asset('#')}}">Des Produits en ligne</a></li>
+                            <li><a href="{{ asset('#')}}">Des Livres Audios</a></li>
+                            <li><a href="{{ asset('#')}}">Des Conseils de Bien-etre</a></li>
+                        </ul>
+                    </div>
+                    <!-- End of .col-sm-3 -->
+
+
+                    <!-- End of .col-sm-3 -->
+
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <ul>
+                            <li><h3>Nous-Visiter Sur:</h3></li>
+                            <li><a href="{{ asset('#')}}">Facebook</a></li>
+                            <li><a href="{{ asset('#')}}">Twitter</a></li>
+                            <li><a href="{{ asset('#')}}">Instagram</a></li>
+
+                        </ul>
+                    </div>
+                    <!-- End of .col-sm-3 -->
+
+                </div>
+            </div> <!-- end container -->
+        </div>
+        <div class="footer-bottom">
+            <h5>Copyright 2021. All rights reserved.</h5>
+            <h6>Design Developpé par <a href="">HEALTHY-VIBES</a></h6>
+        </div>
+
+    </footer> <!-- end footer -->
+
+
+<head>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style type="text/css">
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 50%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script>
+        function initMap() {
+            const myLatLng = { lat: 36.8587351, lng: 10.188232 };
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 6,
+                center: myLatLng,
+            });
+            new google.maps.Marker({
+                position: myLatLng,
+                map,
+                title: "Tunis",
+            });
+        }
+    </script>
+</head>
+<body>
+<div id="map"></div>
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3_UGWEAtwWMGf1klnUbB9G3XIcvJIX-M&callback=initMap&libraries=&v=weekly"
+        async
+></script>
+</body>
+</body>
+</html>
+
+    <!-- end Footer Area
+    ========================================== -->
+
+
+
+    <!--
+    Essential Scripts
+    =====================================-->
+    <!-- Main jQuery -->
+    <script src="{{ asset('frontend/plugins/jquery/jquery.min.js')}}"></script>
+    <!-- Google Map -->
+    <script src="{{ asset('frontend/https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ')}}"></script>
+    <script  src="{{ asset('frontend/plugins/google-map/gmap.js')}}"></script>
+
+    <!-- Form Validation -->
+    <script src="{{ asset('frontend/plugins/form-validation/jquery.form.js')}}"></script>
+    <script src="{{ asset('frontend/plugins/form-validation/jquery.validate.min.js')}}"></script>
+
+    <!-- Bootstrap4 -->
+    <script src="{{ asset('frontend/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+    <!-- Parallax -->
+    <script src="{{ asset('frontend/plugins/parallax/jquery.parallax-1.1.3.js')}}"></script>
+    <!-- lightbox -->
+    <script src="{{ asset('frontend/plugins/lightbox2/dist/js/lightbox.min.js')}}"></script>
+    <!-- Owl Carousel -->
+    <script src="{{ asset('frontend/plugins/slick/slick.min.js')}}"></script>
+    <!-- filter -->
+    <script src="{{ asset('frontend/plugins/filterizr/jquery.filterizr.min.js')}}"></script>
+    <!-- Smooth Scroll js -->
+    <script src="{{ asset('frontend/plugins/smooth-scroll/smooth-scroll.min.js')}}"></script>
+
+    <!-- Custom js -->
+    <script src="{{ asset('frontend/js/script.js')}}"></script>
+
+</body>
+</html>

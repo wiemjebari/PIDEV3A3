@@ -1,0 +1,408 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Healthy Vibes</title>
+
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('http://placehold.it/144.png/000/fff') }}">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('http://placehold.it/114.png/000/fff')}}">
+    <!-- Standard iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('http://placehold.it/72.png/000/fff')}}">
+    <!-- Standard iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('http://placehold.it/57.png/000/fff')}}">
+
+    <!-- Styles -->
+    <link href="{{ asset('backfront/themes/assets/css/lib/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('backfront/themes/assets/css/lib/themify-icons.css')}}" rel="stylesheet">
+    <link href="{{ asset('backfront/themes/assets/css/lib/menubar/sidebar.css')}}" rel="stylesheet">
+    <link href="{{ asset('backfront/themes/assets/css/lib/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('backfront/themes/assets/css/lib/helper.css')}}" rel="stylesheet">
+    <link href="{{ asset('backfront/themes/assets/css/style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+    <div class="nano">
+        <div class="nano-content">
+            <div class="logo"><a href="{{ asset('backfront/documentation/index.html')}}"><!-- <img src="assets/images/logo.png" alt="" /> --><span>Healthy Vibes</span></a></div>
+            <ul>
+                <li class="label">Main</li>
+                <li><a class="sidebar-sub-toggle"><i class="ti-home"></i> Dashboard
+
+                </li>
+                <li><a class="sidebar-sub-toggle"><i class="ti-layout-grid4-alt"></i> Table <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                    <ul>
+                        <li >
+                        <li >
+                            <a href="{{ path('livre_audio_index')}}">
+                                Liste des Livres</a></li>
+                        <li><a href="{{ path('categorie_audio_index')}}">
+
+                                Liste des Catégories</a></li>
+
+                    </ul>
+                </li>
+                <li><a class="sidebar-sub-toggle"><i class="ti-view-list-alt"></i> Ajouter <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                    <ul>
+                        <li >
+                            <a href="{{ path('livre_audio_new') }}">
+                                Ajouter un Livre </a></li>
+                        <li >
+                            <a href="{{ path('categorie_audio_new') }}">
+                                Ajouter une Catégorie </a></li>
+
+                    </ul>
+                </li>
+
+
+                <li><a href="{{ asset('backfront/themes/app-event-calender.html')}}"><i class="ti-calendar"></i> Calender </a></li>
+                <li><a href="{{ asset('backfront/themes/app-email.html')}}"><i class="ti-email"></i> Email</a></li>
+                <li><a href="{{ asset('backfront/themes/app-profile.html')}}"><i class="ti-user"></i> Profile</a></li>
+                <li><a href="{{ asset('backfront/themes/app-widget-card.html')}}"><i class="ti-layout-grid2-alt"></i> Widget</a></li>
+                <li class="label">Features</li>
+                <li><a class="sidebar-sub-toggle"><i class="ti-layout"></i> UI Elements <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                    <ul>
+                        <li><a href="{{ asset('backfront/themes/ui-typography.html')}}">Typography</a></li>
+                        <li><a href="{{ asset('backfront/themes/ui-alerts.html')}}">Alerts</a></li>
+
+                        <li><a href="{{ asset('backfront/themes/ui-button.html')}}">Button</a></li>
+                        <li><a href="{{ asset('backfront/themes/ui-dropdown.html')}}">Dropdown</a></li>
+
+                        <li><a href="{{ asset('backfront/themes/ui-list-group.html')}}">List Group</a></li>
+
+                        <li><a href="{{ asset('backfront/themes/ui-progressbar.html')}}">Progressbar</a></li>
+                        <li><a href="{{ asset('backfront/themes/ui-tab.html')}}">Tab</a></li>
+
+                    </ul>
+                </li>
+                <li><a class="sidebar-sub-toggle"><i class="ti-panel"></i> Components <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                    <ul>
+                        <li><a href="{{ asset('backfront/themes/uc-calendar.html')}}">Calendar</a></li>
+                        <li><a href="{{ asset('backfront/themes/uc-carousel.html')}}">Carousel</a></li>
+                        <li><a href="{{ asset('backfront/themes/uc-weather.html')}}">Weather</a></li>
+                        <li><a href="{{ asset('backfront/themes/uc-datamap.html')}}">Datamap</a></li>
+                        <li><a href="{{ asset('backfront/themes/uc-todo-list.html')}}">To do</a></li>
+                        <li><a href="{{ asset('backfront/themes/uc-scrollable.html')}}">Scrollable</a></li>
+                        <li><a href="{{ asset('backfront/themes/uc-sweetalert.html')}}">Sweet Alert</a></li>
+                        <li><a href="{{ asset('backfront/themes/uc-toastr.html')}}">Toastr</a></li>
+                        <li><a href="{{ asset('backfront/themes/uc-range-slider-basic.html')}}">Basic Range Slider</a></li>
+                        <li><a href="{{ asset('backfront/themes/uc-range-slider-advance.html')}}">Advance Range Slider</a></li>
+                        <li><a href="{{ asset('backfront/themes/uc-nestable.html')}}">Nestable</a></li>
+
+                        <li><a href="{{ asset('backfront/themes/uc-rating-bar-rating.html')}}">Bar Rating</a></li>
+                        <li><a href="{{ asset('backfront/themes/uc-rating-jRate.html')}}'">jRate</a></li>
+                    </ul>
+                </li>
+
+                <li><a class="sidebar-sub-toggle"><i class="ti-heart"></i> Icons <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                    <ul>
+                        <li><a href="{{ asset('backfront/themes/font-themify.html')}}">Themify</a></li>
+                    </ul>
+                </li>
+                <li><a class="sidebar-sub-toggle"><i class="ti-map"></i> Maps <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                    <ul>
+                        <li><a href="{{ asset('backfront/documentation/gmaps.html')}}">Basic</a></li>
+                        <li><a href="{{ asset('backfront/themes/vector-map.html')}}">Vector Map</a></li>
+                    </ul>
+                </li>
+
+                <li class="label">Extra</li>
+                <li><a class="sidebar-sub-toggle"><i class="ti-files"></i> Invoice <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                    <ul>
+                        <li><a href="{{ asset('backfront/themes/invoice.html')}}">Basic</a></li>
+                        <li><a href="{{ asset('backfront/themes/invoice-editable.html')}}">Editable</a></li>
+                    </ul>
+                </li>
+                <li><a class="sidebar-sub-toggle"><i class="ti-target"></i> Pages <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+                    <ul>
+                        <li><a href="{{ asset('backfront/themes/page-login.html')}}">Login</a></li>
+                        <li><a href="{{ asset('backfront/themes/page-register.html')}}">Register</a></li>
+                        <li><a href="{{ asset('backfront/themes/page-reset-password.html')}}">Forgot password</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ asset('backfront/documentation/index.html')}}"><i class="ti-file"></i> Documentation</a></li>
+                <li><a><i class="ti-close"></i> Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /# sidebar -->
+
+
+<div class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="float-left">
+                    <div class="hamburger sidebar-toggle">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="float-right">
+                    <div class="dropdown dib">
+                        <div class="header-icon" data-toggle="dropdown">
+                            <i class="ti-bell"></i>
+                            <div class="drop-down dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-content-heading">
+                                    <span class="text-left">Recent Notifications</span>
+                                </div>
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="{{ asset('#') }}">
+                                                <img class="pull-left m-r-10 avatar-img" src="{{ asset('backfront/themes/assets/images/avatar/3.jpg')}}" alt="" />
+                                                <div class="notification-content">
+                                                    <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                    <div class="notification-heading">Mr. John</div>
+                                                    <div class="notification-text">5 members joined today </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ asset('#') }}">
+                                                <img class="pull-left m-r-10 avatar-img" src="{{ asset('backfront/themes/assets/images/avatar/3.jpg')}}" alt="" />
+                                                <div class="notification-content">
+                                                    <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                    <div class="notification-heading">Mariam</div>
+                                                    <div class="notification-text">likes a photo of you</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ asset('#') }}">
+                                                <img class="pull-left m-r-10 avatar-img" src="{{ asset('backfront/themes/assets/images/avatar/3.jpg')}}" alt="" />
+                                                <div class="notification-content">
+                                                    <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                    <div class="notification-heading">Tasnim</div>
+                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ asset('#') }}">
+                                                <img class="pull-left m-r-10 avatar-img" src="{{ asset('backfront/themes/assets/images/avatar/3.jpg')}}" alt="" />
+                                                <div class="notification-content">
+                                                    <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                    <div class="notification-heading">Mr. John</div>
+                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="text-center">
+                                            <a href="{{ asset('#') }}" class="more-link">See All</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown dib">
+                        <div class="header-icon" data-toggle="dropdown">
+                            <i class="ti-email"></i>
+                            <div class="drop-down dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-content-heading">
+                                    <span class="text-left">2 Nouveaux messages</span>
+                                    <a href="email.html">
+                                        <i class="ti-pencil-alt pull-right"></i>
+                                    </a>
+                                </div>
+                                <div class="dropdown-content-body">
+                                    <ul>
+
+                                        <li class="notification-unread">
+                                            <a href="{{ asset('#') }}">
+                                                <img class="pull-left m-r-10 avatar-img" src="{{ asset('backfront/themes/assets/images/avatar/2.jpg')}}" alt="" />
+                                                <div class="notification-content">
+                                                    <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                    <div class="notification-heading">Mr. John</div>
+                                                    <div class="notification-text">Bonjour Asma, Je voulais juste vous informez ...</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ asset('#') }}">
+                                                <img class="pull-left m-r-10 avatar-img" src="{{ asset('backfront/themes/assets/images/avatar/3.jpg')}}" alt="" />
+                                                <div class="notification-content">
+                                                    <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                    <div class="notification-heading">Michael Qin</div>
+                                                    <div class="notification-text">Bonjour Wiem, Je voulais juste vous informez ...</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ asset('#') }}">
+                                                <img class="pull-left m-r-10 avatar-img" src="{{ asset('backfront/themes/assets/images/avatar/2.jpg')}}" alt="" />
+                                                <div class="notification-content">
+                                                    <small class="notification-timestamp pull-right">02:34 PM</small>
+                                                    <div class="notification-heading">Wiem </div>
+                                                    <div class="notification-text">Bonjour Nour, Je voulais juste vous informez ...</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="text-center">
+                                            <a href="{{ asset('#') }}" class="more-link">Voir tout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown dib">
+                        <div class="header-icon" data-toggle="dropdown">
+                                <span class="user-avatar">Nour
+                                    <i class="ti-angle-down f-s-10"></i>
+                                </span>
+                            <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
+                                <div class="dropdown-content-heading">
+                                    <span class="text-left">Upgrade Now</span>
+                                    <p class="trial-day">30 Days Trail</p>
+                                </div>
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="{{ asset('#')}}">
+                                                <i class="ti-user"></i>
+                                                <span>Profile</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="{{ asset('#')}}">
+                                                <i class="ti-email"></i>
+                                                <span>Inbox</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ asset('#')}}">
+                                                <i class="ti-settings"></i>
+                                                <span>Setting</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="{{ asset('#')}}">
+                                                <i class="ti-lock"></i>
+                                                <span>Lock Screen</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ asset('#')}}">
+                                                <i class="ti-power-off"></i>
+                                                <span>Logout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="content-wrap">
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 p-r-0 title-margin-right">
+                    <div class="page-header">
+                        <div class="page-title">
+                            <h1>Bonjour , bienvenue ici</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- /# column -->
+
+                <!-- /# column -->
+            </div>
+            <!-- /# row -->
+            <div id="main-content">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="card">
+
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                        <h1>Ajouter une Catégorie</h1>
+
+                                        {{ include('categorie_audio/_form.html.twig') }}
+                                        {% block captcha_widget %}
+                                                {{ form_row(form.captcha) }}
+
+                                        {% endblock %}
+                                        <a href="{{ path('categorie_audio_index') }}">retourner à la liste</a>
+
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /# card -->
+                        </div>
+                        <!-- /# column -->
+                    </div>
+                    <!-- /# row -->
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="footer">
+                                <p>2021 © Healthy Vibes. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- jquery vendor -->
+    <script src="{{ asset('backfront/themes/assets/js/lib/jquery.min.js')}}"></script>
+    <script src="{{ asset('backfront/themes/assets/js/lib/jquery.nanoscroller.min.js')}}"></script>
+    <!-- nano scroller -->
+    <script src="{{ asset('backfront/themes/assets/js/lib/menubar/sidebar.js')}}"></script>
+    <script src="{{ asset('backfront/themes/assets/js/lib/preloader/pace.min.js')}}"></script>
+    <!-- sidebar -->
+
+    <!-- bootstrap -->
+
+
+
+
+    <script src="{{ asset('backfront/themes/assets/js/lib/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('backfront/themes/assets/js/scripts.js')}}"></script>
+    <!-- scripit init-->
+
+</body>
+
+</html>
